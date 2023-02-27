@@ -1,14 +1,32 @@
 {
-  "files": [],
-  "references": [
-    {
-      "path": "./tsconfig.config.json"
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "example/**/*.vue",
+    "example/**/*",
+  ],
+  "exclude": [
+    "src/**/__tests__/*",
+  ],
+  "compilerOptions": {
+    "allowJs": true,
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "node",
+      "jsdom"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
     },
-    {
-      "path": "./tsconfig.app.json"
-    },
-    {
-      "path": "./tsconfig.vitest.json"
-    }
-  ]
+    "target": "ES6",
+    "lib": [
+      "ES2015",
+      "DOM"
+    ],
+  },
 }
