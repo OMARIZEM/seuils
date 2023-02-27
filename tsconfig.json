@@ -1,0 +1,32 @@
+{
+  "include": [
+    "env.d.ts",
+    "src/**/*",
+    "src/**/*.vue",
+    "example/**/*.vue",
+    "example/**/*",
+  ],
+  "exclude": [
+    "src/**/__tests__/*",
+  ],
+  "compilerOptions": {
+    "allowJs": true,
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "node",
+      "jsdom"
+    ],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
+    "target": "ES6",
+    "lib": [
+      "ES2015",
+      "DOM"
+    ],
+  },
+}
